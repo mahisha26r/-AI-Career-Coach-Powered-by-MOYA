@@ -57,7 +57,7 @@ export OPENAI_API_KEY='your-api-key'
 
 2. **Run the application**
 ```bash
-python your_script_name.py
+python ai-career-coach-powered-by-moya.ipynb
 ```
 
 3. **Commands in the chat**
