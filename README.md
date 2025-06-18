@@ -1,50 +1,82 @@
 #  AI Career Coach – Powered by MOYA
+# 🧠 AI Career Coach
 
+AI Career Coach is a command-line assistant that helps users optimize resumes and prepare for interviews using powerful language models. Built with the [Moya](https://github.com/moyaproject/moya) multi-agent framework and OpenAI's GPT-4o, it offers contextual memory, resume scoring, and mock interview simulations.
 
-## Features
+---
 
-- **Agent Management**: Create, register, and manage multiple AI agents.
-- **Orchestration**: Orchestrate conversations and tasks across multiple agents.
-- **Memory Tools**: Integrate memory tools to maintain conversation context and history.
-- **Streaming Responses**: Support for streaming responses from agents.
-- **Extensibility**: Easily extend the framework with new agents, tools, and orchestrators.
+## 🚀 Features
 
-## Getting Started
+- 📄 **Resume Optimization**
+  - ATS scoring out of 100
+  - Keyword alignment and measurable impact suggestions
+  - Professional resume feedback
 
+- 🎤 **Mock Interview Trainer**
+  - Behavioral, HR, and technical interviews
+  - Real-time structured feedback
+  - Practice questions with improvement tips
+
+- 🧠 **Memory Tool**
+  - Stores and retrieves past messages
+  - Generates conversation summaries
+  - Maintains continuity for better answers
+
+- 📂 **Document Parsing**
+  - Upload resumes and job descriptions in `.docx` or `.pdf`
+  - Automatically extracts and uses file content
+
+---
+
+## 🏗️ Architecture
+
+- **Agents**
+  - `resume_agent`: Resume evaluation and scoring
+  - `interview_trainer_agent`: Mock interviews with feedback
+  - `classifier_agent`: Routes input to the right agent
+
+- **MemoryTool**
+  - `store_message`: Save user or assistant messages
+  - `get_last_n_messages`: Fetch recent conversation
+  - `get_thread_summary`: Get a text summary of conversation
+
+- **Technologies**
+  - Python 3.8+
+  - OpenAI API (GPT-4o)
+  - Moya Framework
+  - PyPDF2 & python-docx
+
+---
+
+## 💻 Usage
+
+1. **Set your OpenAI API key**
 ```bash
-pip install moya-ai  # Only core framework
-pip install moya-ai[all] # All the supported services such as OpenAI, Bedrock, Ollama, Crewai
-# or install specific ones - for example openai and ollama
-pip install moya-ai[openai, ollama]
+export OPENAI_API_KEY='your-api-key'
 ```
 
-
-# Contributing to MOYA
-
-We accept contributions exclusively through forked repositories. Please follow these steps:
-
-1. Fork this repository to your GitHub account
-2. Create a new branch in your fork for your changes
-3. Make your changes and commit them to your branch
-4. Submit a pull request from your fork's branch to our main repository
-
-### Prerequisites
-
-- Python 3.10+
-- Install required dependencies:
-  ```bash
-  pip install .
-  ```
-
-### Quick Start Examples
-
-#### OpenAI Agent
-
-Interactive chat example using OpenAI agent with conversation memory.
-
-```python
-# filepath: ~/github/moya/examples/quick_start_openai.py
-
-python -m examples.quick_start_openai
-
+2. **Run the application**
+```bash
+python your_script_name.py
 ```
+
+3. **Commands in the chat**
+```bash
+/resume path/to/your_resume.docx
+/jd path/to/job_description.pdf
+exit  # to quit
+```
+
+---
+
+## 🛡️ Security
+
+⚠️ The current script hardcodes the API key. You should load it from environment variables or use secure vaults for production.
+
+---
+
+## 📄 License
+
+MIT License © 2025 AI Career Coach
+
+
