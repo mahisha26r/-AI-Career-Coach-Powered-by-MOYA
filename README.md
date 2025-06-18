@@ -1,5 +1,5 @@
-#  AI Career Coach – Powered by MOYA
-# 🧠 AI Career Coach
+
+# 🧠 AI Career Coach – Powered by MOYA
 
 AI Career Coach is a command-line assistant that helps users optimize resumes and prepare for interviews using powerful language models. Built with the [Moya](https://github.com/moyaproject/moya) multi-agent framework and OpenAI's GPT-4o, it offers contextual memory, resume scoring, and mock interview simulations.
 
